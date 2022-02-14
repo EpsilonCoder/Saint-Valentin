@@ -1,0 +1,195 @@
+html {
+    height: 100vh;
+    min-height: 100vh;
+  }
+  
+  body {
+    background: black;
+    font-family: sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    user-select: none;
+    -webkit-user-select: none;
+    width: 100vw;
+  }
+  
+  #info {
+    bottom: 15vh;
+    opacity: 0.7;
+    position: fixed;
+  }
+  
+  .centered {
+    left: 0;
+    margin: auto;
+    right: 0;
+    text-align: center;
+  }
+  
+  #modal {
+    background: black url('https://i.postimg.cc/tJ7M85Tw/HVD-2022-17.jpg') no-repeat top center;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    background-size: 100% 100%;
+    border-radius: 5vmin;
+    bottom: 0;
+    display: block;
+    height: 80vh;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    transition: 5s;
+    visibility: visible;
+    width: 80vw;
+    z-index: 777;
+  }
+  
+  #modalText {
+    bottom: 0;
+    color: pink;
+    display: inherit;
+    font-size: 3vmin;
+    height: fit-content;
+    margin: inherit;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    transition: 4s;
+    visibility: visible;
+    width: 80vw;
+  }
+  
+  #message {
+    color: ivory;
+    font-size: 4vmin;
+    margin: auto;
+    opacity: 1;
+    position: fixed;
+    top: 18vh;
+    transition: 4s;
+    visibility: visible;
+  }
+  
+  #heart {
+    bottom: calc(100vh / 2 - 7vmin);
+    filter: blur(0.3vmin);
+    left: 0;
+    margin: 0 auto;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    top: calc(100vh / 2 - 7vmin);
+    z-index: 7;
+  }
+  
+  .heart {
+    animation: zoom ease-in-out 5s infinite;
+    animation-play-state: paused;
+    background: purple;
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    background-image: linear-gradient(135deg, rgba(255, 255, 220, .3) 0%, transparent 100%);
+    height: 14vmin;
+    position: relative;
+    transform: rotate(45deg);
+    width: 14vmin;
+  }
+  
+  .heart::before,
+  .heart::after {
+    background: purple;
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 220, .3) 57%, transparent 100%);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 220, .3) 57%, transparent 100%);
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 220, .3) 57%, transparent 100%);
+    background-image: linear-gradient(135deg, rgba(255, 255, 220, .3) 57%, transparent 100%);
+    border-radius: 50%;
+    content: "";
+    height: 14vmin;
+    position: absolute;
+    width: 14vmin;
+  }
+  
+  .heart::before {
+    left: -7vmin;
+  }
+  
+  .heart::after {
+    top: -7vmin;
+  }
+  
+  @keyframes zoom {
+    from {
+      transform: rotate(45deg) scale(0);
+    }
+  
+    50% {
+      transform: rotate(45deg) scale(2.5);
+    }
+  
+    to {
+      transform: rotate(45deg) scale(0);
+    }
+  }
+  
+  .images {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+  
+  .images img {
+    animation: kenBurns 10s ease-in-out infinite;
+    animation-play-state: paused;
+    height: 100%;
+    position: absolute;
+    transition: 5s;
+    width: 100%;
+  }
+  
+  #image1 {
+    opacity: 1;
+  }
+  
+  #image2 {
+    opacity: 0;
+  }
+  
+  @keyframes kenBurns {
+    from {
+      -moz-transform-origin: bottom left;
+      -moz-transform: scale(1.0);
+      -ms-transform-origin: bottom left;
+      -ms-transform: scale(1.0);
+      -o-transform-origin: bottom left;
+      -o-transform: scale(1.0);
+      -webkit-transform-origin: bottom left;
+      -webkit-transform: scale(1.0);
+      transform-origin: bottom left;
+      transform: scale(1.0);
+    }
+  
+    50% {
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  
+    to {
+      -moz-transform-origin: top right;
+      -moz-transform: scale(1.0);
+      -ms-transform-origin: top right;
+      -ms-transform: scale(1.0);
+      -o-transform-origin: top right;
+      -o-transform: scale(1.0);
+      -webkit-transform-origin: top right;
+      -webkit-transform: scale(1.0);
+      transform-origin: top right;
+      transform: scale(1.0);
+  }
+  }
